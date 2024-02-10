@@ -45,5 +45,5 @@ kramdown:
 
 RSS: false
 
-sidebar: true
-sidebar-about-description: uh
+# sidebar: true
+# sidebar-about-description: uh
