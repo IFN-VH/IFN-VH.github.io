@@ -21,12 +21,15 @@ use_math:
 google_analytics:
 
 # Everything below here can be ignored, unless you want to change the theme entirely
-theme: jekyll-text-theme
+# theme: minima
+remote_theme: kitian616/jekyll-TeXt-theme
+
 plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-octicons
   - jekyll-github-metadata
+  - jekyll-remote-theme
 
 titles_from_headings:
   enabled:     true
