@@ -14,17 +14,6 @@ github_username: IFN-VH
 email: infvic@outlook.com
 twitter_username:
 
-# Page theme
-remote_theme: mmistakes/jekyll-theme-basically-basic@1.4.5
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
-skin: sea
-navigation_pages: 
-  - about.md
-  - index.md
-paginate: 5
-paginate_path: /page:num/
-
 # Set this to true to get LaTeX math equation support
 use_math: true
 
@@ -32,7 +21,7 @@ use_math: true
 google_analytics:
 
 # Everything below here can be ignored, unless you want to change the theme entirely
-theme: 
+theme: minima
 
 plugins:
   - jekyll-feed
