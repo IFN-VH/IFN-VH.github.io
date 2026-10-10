@@ -14,6 +14,11 @@ github_username: IFN-VH
 email: infvic@outlook.com
 twitter_username:
 
+# Page theme
+remote_theme: pages-themes/merlot@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+
 # Set this to true to get LaTeX math equation support
 use_math: true
 
