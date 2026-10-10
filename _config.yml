@@ -11,11 +11,11 @@ description: 💗
 github_username: IFN-VH
 
 # Email and twitter are optional:
-email: 18910581607@163.com
+email: infvic@outlook.com
 twitter_username:
 
 # Set this to true to get LaTeX math equation support
-use_math:
+use_math: true
 
 # Add your Google Analytics ID here if you have one and want to use it
 google_analytics:
