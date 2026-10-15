@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Markdown 写作</title>
+    <link rel="stylesheet" href="/editor.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="brand">
+        <strong>Markdown 写作</strong>
+        <span id="document-state" aria-live="polite">载入中</span>
+      </div>
+      <div class="actions">
+        <label class="file-picker">
+          <span class="sr-only">选择文章</span>
+          <select id="file-select" aria-label="选择文章"></select>
+        </label>
+        <button id="new-button" type="button">新建</button>
+        <button id="save-button" class="primary" type="button">保存</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="pane editor-pane" aria-label="Markdown 编辑区">
+        <div class="pane-heading">
+          <span>Markdown</span>
+          <span id="editor-count">0 字</span>
+        </div>
+        <textarea id="editor" spellcheck="false" aria-label="Markdown 内容"></textarea>
+      </section>
+      <section class="pane preview-pane" aria-label="文章预览区">
+        <div class="pane-heading"><span>预览</span><span>博客样式</span></div>
+        <iframe id="preview" title="文章实时预览" sandbox=""></iframe>
+      </section>
+    </main>
+
+    <dialog id="new-dialog">
+      <form id="new-form" method="dialog">
+        <h2>新建草稿</h2>
+        <label>标题<input id="new-title" required autocomplete="off" /></label>
+        <label>文件名<input id="new-filename" required autocomplete="off" placeholder="my-new-post" /></label>
+        <p>新文章会保存为草稿，不会出现在博客首页。</p>
+        <div class="dialog-actions">
+          <button id="cancel-new" type="button">取消</button>
+          <button class="primary" type="submit">创建</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="/editor.js"></script>
+  </body>
+</html>

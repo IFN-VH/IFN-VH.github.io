@@ -1,0 +1,97 @@
+:root {
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #26231f;
+  background: #eae8e2;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+button, select, input, textarea { font: inherit; }
+
+.toolbar {
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid #cecac2;
+  background: #f8f7f3;
+}
+
+.brand, .actions { display: flex; align-items: center; gap: 0.75rem; }
+.brand strong { font-family: ui-serif, Georgia, "Noto Serif SC", serif; }
+#document-state { color: #817a71; font-size: 0.78rem; }
+
+button, select, input {
+  min-height: 2.15rem;
+  border: 1px solid #cecac2;
+  border-radius: 0.38rem;
+  background: #fff;
+  color: #26231f;
+}
+
+button { padding: 0 0.85rem; cursor: pointer; }
+button:hover { border-color: #817a71; }
+button.primary { border-color: #26231f; background: #26231f; color: #fff; }
+button:disabled { cursor: default; opacity: 0.48; }
+select { width: min(21rem, 34vw); padding: 0 2rem 0 0.7rem; }
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1px;
+  height: calc(100% - 3.6rem);
+  background: #cecac2;
+}
+
+.pane { min-width: 0; background: #f8f7f3; }
+.pane-heading {
+  height: 2.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.85rem;
+  border-bottom: 1px solid #dedbd4;
+  color: #817a71;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+#editor {
+  display: block;
+  width: 100%;
+  height: calc(100% - 2.35rem);
+  resize: none;
+  border: 0;
+  outline: 0;
+  padding: 1.35rem 1.5rem 5rem;
+  color: #2f2c28;
+  background: #fbfaf7;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  tab-size: 2;
+}
+
+#preview { display: block; width: 100%; height: calc(100% - 2.35rem); border: 0; background: #f8f7f3; }
+
+dialog { width: min(28rem, calc(100% - 2rem)); border: 0; border-radius: 0.6rem; padding: 0; box-shadow: 0 1rem 4rem #0003; }
+dialog::backdrop { background: #26231f66; }
+dialog form { display: grid; gap: 1rem; padding: 1.5rem; }
+dialog h2, dialog p { margin: 0; }
+dialog h2 { font: 700 1.35rem/1.3 ui-serif, Georgia, "Noto Serif SC", serif; }
+dialog p { color: #817a71; font-size: 0.82rem; }
+dialog label { display: grid; gap: 0.4rem; font-size: 0.88rem; }
+dialog input { width: 100%; padding: 0 0.7rem; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 0.4rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+@media (max-width: 760px) {
+  .toolbar { height: auto; min-height: 3.6rem; align-items: stretch; padding-block: 0.6rem; flex-direction: column; }
+  .brand { justify-content: space-between; }
+  .actions { display: grid; grid-template-columns: 1fr auto auto; }
+  select { width: 100%; }
+  .workspace { height: calc(100% - 6.9rem); grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+}

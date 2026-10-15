@@ -6,6 +6,7 @@
   "packageManager": "pnpm@12.11.2",
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "write": "node tools/markdown-writer/server.mjs",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro check && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check"
@@ -13,6 +14,7 @@
   "dependencies": {
     "@astrojs/check": "latest",
     "astro": "latest",
+    "marked": "^18.1.1",
     "typescript": "^6.0.3"
   }
 }
