@@ -91,6 +91,52 @@ h1 { margin: 0 0 0.7rem; font-size: clamp(2rem, 7vw, 3.15rem); }
   white-space: inherit;
 }
 
+/* Day 1 body photos follow its 465px reference photo, preserving proportions. */
+.prose img.day-one-body-photo {
+  display: block;
+  width: 465px;
+  max-width: 100%;
+  height: auto;
+  margin: 1.4rem auto;
+}
+
+/* One article's three-photo arrangement; each column is about 465px wide. */
+.prose .day-one-photo-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "portrait map" "portrait bridge";
+  gap: 12px;
+  width: min(942px, calc(100vw - 40px));
+  margin: 2rem 0 1.4rem 50%;
+  transform: translateX(-50%);
+}
+.day-one-photo-portrait { grid-area: portrait; position: relative; }
+.day-one-photo-map { grid-area: map; }
+.day-one-photo-bridge { grid-area: bridge; }
+.prose .day-one-photo-layout img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+.prose .day-one-photo-portrait img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 700px) {
+  .prose .day-one-photo-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "portrait" "map" "bridge";
+    width: min(465px, 100%);
+    margin-inline: auto;
+    transform: none;
+  }
+  .prose .day-one-photo-portrait img { position: static; height: auto; }
+}
+
 .not-found { padding: 2rem 0 5rem; text-align: center; }
 .not-found h1 { font-size: 2rem; }
 .error-code { margin: 0; color: #aaa39a; font: 700 5rem/1 ui-monospace, monospace; }
